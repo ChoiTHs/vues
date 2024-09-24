@@ -3,9 +3,15 @@
   <div id="app">
     <!-- <h1 v-on:click="click_count()">count = {{ count }}</h1> -->
     <h1 @click="click_count">count = {{ count }}</h1>
-    <div v-if="count > 5">
+    <div id="check5" v-if="count > 5">
       5보다 커요!!!
     </div>
+    <h2>Furit.vue</h2>
+    <ul>
+      <Fruit v-for="furit in furits" :key="furit" :name="furit">
+      </Fruit>
+    </ul>
+    <h2>App.vue</h2>
     <ul>
       <li v-for="furit in furits" :key="furit">
         {{ furit }}
@@ -16,7 +22,12 @@
 
 <!-- javascript -->
 <script>
+import Fruit from './components/Fruit.vue';
+
 export default({
+  components:{
+    Fruit
+  },
   data() {
     return {
       count: 0,
@@ -32,13 +43,16 @@ export default({
 </script>
 
 <!-- css, scss -->
-<style>
+<style lang="scss">
 h1{
   font-size: 50px;
   color: royalblue;
 }
-ul{
-  li{font-size: 40px;}
-
+#app{
+  ul{
+    li{
+      font-size: 40px;
+    }
+  }
 }
 </style>
