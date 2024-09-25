@@ -17,16 +17,19 @@
         {{ furit }}
       </li>
     </ul>
+    <Hello />
   </div>
 </template>
 
 <!-- javascript -->
 <script>
 import Fruit from './components/Fruit.vue';
+import Hello from './components/HelloWorld.vue'
 
 export default({
   components:{
-    Fruit
+    Fruit,
+    Hello
   },
   data() {
     return {
