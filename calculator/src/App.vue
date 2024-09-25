@@ -95,19 +95,46 @@ export default {
       this.output = this.cur;
     },
     operation(e) {
-      // 연산 로직 분리
-      // 클릭한 버튼 값 가져오기
+      // 버튼 클릭 처리
       const n = e.currentTarget.value;
       if (n === 'C') {
-        this.clear(); // 초기화 함수 호출
+        this.clear();
       } else if (['+', '-', '*', '/', '='].includes(n)) {
-        this.calculate(n); // 연산 흐름 제어 함수 호출
+        this.calculate(n);
       } else {
-        this.userInput(n); // 사용자가 입력한 숫자 저장 함수 호출
+        this.userInput(n);
       }
     },
+    handleKeyDown(e) {
+      // 키보드 입력 처리
+      const key = e.key;
+      if (/[0-9]/.test(key)) {
+        // 숫자 입력
+        this.userInput(key);
+      } else if (['+', '-', '*', '/'].includes(key)) {
+        // 연산자 입력
+        this.calculate(key);
+      } else if (key === 'Enter') {
+        // Enter는 '='로 처리
+        this.calculate('=');
+      } else if (key === 'Escape') {
+        // Escape는 'C'로 처리
+        this.clear();
+      } else if (key === '.') {
+        // 소수점 처리
+        this.userInput('.');
+      }
+    }
   },
-}
+  mounted() {
+    // 컴포넌트가 마운트될 때 키보드 이벤트 리스너 추가
+    window.addEventListener('keydown', this.handleKeyDown);
+  },
+  beforeUnmount() {
+    // 컴포넌트가 파괴되기 전에 키보드 이벤트 리스너 제거
+    window.removeEventListener('keydown', this.handleKeyDown);
+  }
+};
 </script>
 
 <style>
