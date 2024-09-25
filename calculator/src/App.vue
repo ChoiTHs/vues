@@ -1,7 +1,7 @@
 <template>
   <div class="calculator">
     <form name="forms">
-      <input type="text" name="output" readonly />
+      <input v-model="output" type="text" name="output" readonly />
         <input type="button" class="clear" value="C" @click="operation"/>
         <input type="button" class="operator" value="/" @click="operation"/>
         <input type="button" value="1" @click="operation"/>
@@ -37,7 +37,8 @@ export default {
   methods:{
     operation(e){
       const n = e.currentTarget.value;
-      console.log(n);
+      this.cur = this.cur === null ? n : (this.cur += n);
+      this.output = this.cur;
     }
   },
 }
