@@ -4,6 +4,7 @@
     2. vue3test
     3. family-album
     4. vue3-com
+    5. vue3-watcher
 # 9월
 ### 25일 과제
 
@@ -27,3 +28,8 @@ Computed Properties
 	•	자동 업데이트: computed properties는 의존하고 있는 데이터가 변경되면 자동으로 업데이트됩니다.
 	•	캐싱(caching): 의존하는 값이 변경되지 않으면 동일한 값이 재계산되지 않고 캐시된 값을 반환합니다.<br>즉, 의존성이 변경될 때만 재연산이 이루어집니다.
 	•	사용 예시: 데이터에 의존하는 동적인 값을 사용해야 할 때 적합합니다.
+
+#### 왓쳐
+참고 문서 링크
+- https://www.w3schools.com/vue/vue_watchers.php
+- https://v2.ko.vuejs.org/v2/guide/computed.html
