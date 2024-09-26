@@ -1,13 +1,23 @@
 <template>
-  <first-child />
+  <first-child v-if="visible" />
 </template>
 
 <script>
-import FirstChild from './components/FirstChild.vue';
+import FirstChild from '@/components/FirstChild.vue';
 export default {
   name: 'App',
   components: {
     FirstChild,
+  },
+  data(){
+    return{
+      visible: true,
+    };
+  },
+  created(){
+    setTimeout(() => {
+      this.visible = false;
+    }, 3000);
   }
 }
 </script>
