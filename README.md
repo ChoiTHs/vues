@@ -5,6 +5,7 @@
     3. family-album
     4. vue3-com
     5. vue3-watcher
+    6. vue3-emit-props
 # 9월
 ### 25일 과제
 
@@ -33,3 +34,6 @@ Computed Properties
 참고 문서 링크
 - https://www.w3schools.com/vue/vue_watchers.php
 - https://v2.ko.vuejs.org/v2/guide/computed.html
+
+#### emit/props
+문서 링크 - https://developerjournal.tistory.com/4
