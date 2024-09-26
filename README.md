@@ -37,3 +37,6 @@ Computed Properties
 
 #### emit/props
 문서 링크 - https://developerjournal.tistory.com/4
+
+### 과제 
+- child-infomatioin
