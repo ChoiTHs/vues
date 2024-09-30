@@ -1,4 +1,4 @@
-# lifecycle2
+# vue-liefcycle2
 
 ## Project setup
 ```

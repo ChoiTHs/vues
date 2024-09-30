@@ -1,10 +1,10 @@
 <template>
-    <h2>전역 컴포넌트</h2>
+    <h2>Child Page</h2>
 </template>
 
 <script>
 export default {
-  beforeCreate(){
+    beforeCreate(){
       console.log('Child beforeCreate');
     },
     created(){
@@ -31,6 +31,7 @@ export default {
 }
 </script>
 
+
 <style scoped>
-h2 { color: rgb(0, 255, 34);}
+    h2 { color: red;}
 </style>
