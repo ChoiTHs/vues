@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="module">
+      import { createApp } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
+
+      const root = {
+          template:`
+                    <button v-on:click="onClick">버튼</button>
+                    <button v-on:click="click">버튼</button>
+                    <button @mouseover="console.log('축약함수')">축약</button>
+                    <button @click="call($event)">이벤트</button>
+                   `,
+          setup(){
+            const click = () => {alert('click')}; //방법
+            const call = (event) =>{console.log(event.target.innerText)};
+            return {
+                      onClick() {console.log("Hello world")},
+                      click,
+                      call
+                   }
+          }
+      }
+
+      const app = createApp(root);  //root App.vue 생각 ....
+      app.mount("#app");
+    </script>
+</body>
+</html>

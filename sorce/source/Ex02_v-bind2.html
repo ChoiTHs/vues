@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        https://www.w3schools.com/vue/vue_v-bind.php
+        
+        문법) 
+        <div v-bind:[attribute]="[Vue data]"></div>
+        The shorthand for 'v-bind:' is simply ':'.
+        구현)
+        <img v-bind:src="url">
+        v-bind:style="{ backgroundColor: isImportant ? 'lightcoral' : 'lightgray' }"
+        v-bind:class="{ myClass: true }"
+        :class="{ impClass: isImportant }"
+        */
+    </script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+        <div id="app"></div>
+</body>
+    <script>
+       //속성이름만 있고  값이 없는  >> true , false
+        //readonly=true
+        //<input disabled="" readonly="">
+        const root = {
+            template:`<input  :autofocus="isAutoFocus" 
+                              :disabled="isDisabled"
+                              :readonly="isReadonly"  />` ,
+            setup(){
+                return {
+                   isAutoFocus:false,
+                   isDisabled:true,
+                   isReadonly:true
+                };
+            }
+        };
+
+        const app = Vue.createApp(root);
+        app.mount("#app");
+    </script>
+</html>

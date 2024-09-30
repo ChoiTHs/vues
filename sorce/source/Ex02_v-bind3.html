@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        https://www.w3schools.com/vue/vue_v-bind.php
+        
+        문법) 
+        <div v-bind:[attribute]="[Vue data]"></div>
+        The shorthand for 'v-bind:' is simply ':'.
+        구현)
+        <img v-bind:src="url">
+        v-bind:style="{ backgroundColor: isImportant ? 'lightcoral' : 'lightgray' }"
+        v-bind:class="{ myClass: true }"
+        :class="{ impClass: isImportant }"
+        
+        
+        html 페이지에서 import
+      <script type="module">
+            import {
+                     createApp,
+                     reactive,
+                    } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
+        
+        
+      >> src="https://unpkg.com/vue@3/dist/vue.global.js" 링크
+
+        */
+    </script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+        <div id="app"></div>
+</body>
+    <script>
+       
+        const root = {
+            template:`<h1 :class="myClass">방가방가</h1>` ,
+            setup(){
+                return {
+                   myClass:Vue.reactive({
+                        active:true,
+                        disabled:1==1
+                   })
+                };
+            }
+        };
+
+        const app = Vue.createApp(root);
+        app.mount("#app");
+    </script>
+</html>

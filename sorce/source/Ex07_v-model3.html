@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+  <div id="app"></div>
+  <script type="module">
+    import { createApp ,ref} from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
+
+    const root = {
+        template:`
+                   <label for="country">select your country</label>
+                    <select id="country" v-model="country">
+                        <option value="korea">korea</option>
+                        <option value="usa">usa</option>
+                        <option value="uk">uk</option>
+                    </select>
+                    <p>selected country: {{country}}</p>
+                    </hr>
+                    <textarea id="txtarea" v-model="area"></textarea>
+                    <p>txtarea : {{area}}</p>
+                 `,
+        setup(){
+                  const country = ref('');  //v-model="country"  연결....
+                  const area = ref('');
+                  return {
+                            country,
+                            area
+                         }
+               }
+    }
+
+    const app = createApp(root);  //root App.vue 생각 ....
+    app.mount("#app");
+  </script>
+   <script>
+ 
+             /*
+                https://www.w3schools.com/vue/vue_v-model.php
+
+                v-model creates a link between the input element value attribute and a data value 
+                in the Vue instance. 
+                When you change the input, the data updates and when the data changes, 
+                the input updates as well (two-way binding).
+                양방향 바인딩 ....
+              */
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="module">
+    import { createApp } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
+
+    const root = {
+        template:`
+                  <button @click.left="console.log('left')">버튼</button>
+                  <button @click.right="console.log('right')">버튼</button>
+                  <button @click.middle="console.log('middle')">버튼</button>
+                 `,
+        setup(){
+               }
+    }
+
+    const app = createApp(root);  //root App.vue 생각 ....
+    app.mount("#app");
+  </script>
+   <script>
+ 
+     /*
+        https://www.w3schools.com/vue/vue_event-modifiers.php
+
+        예)  <button v-on:click.once="creteAlert">Create Alert</button>
+     */
+    </script>
+</body>
+</html>

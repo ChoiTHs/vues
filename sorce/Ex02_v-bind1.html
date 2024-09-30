@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        https://www.w3schools.com/vue/vue_v-bind.php
+        
+        문법) 
+        <div v-bind:[attribute]="[Vue data]"></div>
+        The shorthand for 'v-bind:' is simply ':'.
+        구현)
+        <img v-bind:src="url">
+        v-bind:style="{ backgroundColor: isImportant ? 'lightcoral' : 'lightgray' }"
+        v-bind:class="{ myClass: true }"
+        :class="{ impClass: isImportant }"
+        */
+    </script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+        <div id="app"></div>
+</body>
+    <script>
+        //composition API
+        //<h1 id="bye">Hello World</h1>
+        //template:`<h1 v-bind:[name]="value">Hello World</h1>`
+
+        // v-bind 생략  :[]=...
+        //<h1 id="bye" class="bye">Hello World</h1>
+        const root = {
+            template:`<h1 :[name1]="value1" :[name2]="value2">Hello World</h1>` ,
+            setup(){
+                return {
+                    name1:"id",
+                    value1:"bye",
+                    name2:"class",
+                    value2:"bye",
+                }
+            }
+        }
+
+        const app = Vue.createApp(root);
+        app.mount("#app");
+    </script>
+</html>

@@ -6,8 +6,16 @@
     4. vue3-com
     5. vue3-watcher
     6. vue3-emit-props
+    7. vue-lifecycle
+    8. vue-lifecycle2
+    9. vue_glo-loc
+
+#### w3 예제 교수님 소스
+
+    sorce
+
 # 9월
-### 25일 과제
+## 25일 과제
 
     1. Vuejs로 계산기 프로그램 만들기
 
@@ -15,7 +23,7 @@
     사진 나온 밑에 버튼 누르면 좋아요가 1씩 증가 되고, 추천 받은 수 누적하기
     참고 하기.
 
-### 26일 
+## 26일 
 #### 코딩 자율학습 5장
 1. 컴포넌트 이해 - coja5_1
 #### 컴퓨티드
@@ -40,3 +48,14 @@ Computed Properties
 
 ### 과제 
 - child-infomatioin
+
+## 30일
+#### w3 예제 교수님 코드
+    sorce
+
+#### 생명주기
+    vue-lifecycle
+    vue-lifecycle2
+
+#### 전역 설정
+    vue_glo-loc

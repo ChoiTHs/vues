@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="module">
+      import { createApp } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
+
+      const root = {
+          template:`
+                    <nav>
+                        <a v-for="item of menu"   v-show="item.length > 3"   :key="item" :href="item">{{item}}</a>
+                    </nav>
+                   `,
+          setup(){
+            const menu=["AAA" , "BBB" , "CCC"];
+            return {
+                      menu
+                   }
+          }
+      }
+
+      const app = createApp(root);  //root App.vue 생각 ....
+      app.mount("#app");
+    </script>
+</body>
+</html>
