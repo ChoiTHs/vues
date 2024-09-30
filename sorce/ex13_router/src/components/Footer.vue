@@ -1,0 +1,21 @@
+<template>
+    <div>
+        Foooter ...
+    </div>
+</template>
+
+<script setup>
+
+</script>
+
+<style scoped>
+footer {
+  background-color: #333;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+</style>
