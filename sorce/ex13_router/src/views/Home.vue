@@ -1,6 +1,8 @@
 <template>
     <div>
-         Home   
+        Home   
+        <p>{{ $route.path }}</p>
+        <p>{{ $route.name }}</p>
     </div>
 </template>
 

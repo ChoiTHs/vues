@@ -1,16 +1,16 @@
 <template>
     <header>
         <nav>
-            <router-link to="/">Home</router-link>
-            <router-link to="/about">About</router-link>
-            <router-link to="/services">Services</router-link>
-            <router-link to="/contact">Contact</router-link>
+            <router-link to="/" active-class="on">Home</router-link>
+            <router-link to="/about" active-class="on">About</router-link>
+            <router-link to="/services" active-class="on">Services</router-link>
+            <router-link to="/contact" active-class="on">Contact</router-link>
         </nav>
     </header>
 </template>
 
 <script setup>
-
+import '@/css/style.css'
 </script>
 
 <style scoped>
@@ -24,6 +24,11 @@ color: white;
 margin-right: 15px;
 text-decoration: none;
 }
+
+nav .on{
+        font-weight: bold;
+        color: #449e44;
+    }
 
 ​nav a:hover {
 text-decoration: underline;

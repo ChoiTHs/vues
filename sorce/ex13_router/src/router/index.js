@@ -26,9 +26,7 @@ const routes = [
         name:'Contact',
         component:Contact
     },
-
 ];
-
 const router = createRouter({
     history:createWebHistory(),
     routes
