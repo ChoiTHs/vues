@@ -1,0 +1,30 @@
+{
+  "diary": [
+    {
+      "id": "6e46",
+      "content": "ㅇㅇㅇㅇㅇ",
+      "priority": "상",
+      "status": "미완료",
+      "createdAt": "2024-10-02"
+    },
+    {
+      "id": "4b0d",
+      "content": "ㅁㅁㅁㅁㅁㅁㅁㅁㅁ",
+      "priority": "중",
+      "status": "미완료",
+      "createdAt": "2024-10-02"
+    }
+  ],
+  "todo": [
+    {
+      "id": "068c",
+      "msg": "ㅇㅇㅇ",
+      "completed": false
+    },
+    {
+      "id": "7036",
+      "msg": "ㅇㅇㅇ",
+      "completed": false
+    }
+  ]
+}

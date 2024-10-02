@@ -190,6 +190,6 @@ const updateData = async(userId) => {
 
 <style scoped>
 div{
-  margin: 8px;
+  margin: 8px;cd
 }
 </style>
